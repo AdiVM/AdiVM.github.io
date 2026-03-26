@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>body { font-family: Georgia, serif; max-width: 800px; margin: auto; padding: 40px 24px; line-height: 1.7; color: #222; } h1 { font-size: 22px; } hr { margin: 24px 0; }</style>
+  <style>
+    body { font-family: Georgia, serif; max-width: 800px; margin: auto; padding: 40px 24px; line-height: 1.7; color: #222; }
+    h1 { font-size: 22px; line-height: 1.4; }
+    h2 { font-size: 16px; margin-top: 28px; }
+    hr { margin: 24px 0; border: none; border-top: 1px solid #ddd; }
+    p { margin: 12px 0; }
+  </style>
 </head>
 <body>
   <p><a href="../index.html">← Back to main page</a></p>
@@ -11,7 +17,18 @@
   <p><strong>Adithya V. Madduri</strong>, Chirag J. Patel</p>
   <p><em>20th International Conference on Alzheimer's &amp; Parkinson's Diseases, 2026</em></p>
   <hr>
-  <h2>Abstract</h2>
-  <p>[Paste your abstract here.]</p>
+
+  <h2>Aims</h2>
+  <p>Parkinson's disease (PD) remains challenging to characterize at the cellular level, particularly within the human prefrontal cortex (PFC). This study aimed to resolve PD-associated transcriptional variability across major cell types.</p>
+
+  <h2>Methods</h2>
+  <p>Using GSE202210, a single-nucleus RNA-seq dataset (~80,000 nuclei from six PD and six control donors), we analyzed PD-associated transcriptional variability across six major cell types through a combined machine-learning and Wilcoxon differential-expression (DE) framework. Donor-stratified LightGBM (LGBM) classifiers were trained with five replicate models per cell type to avoid label leakage and ensure stable feature discovery.</p>
+
+  <h2>Results</h2>
+  <p>In LGBM models, excitatory neurons exhibited the clearest disease-related signal (median AUC = 0.734), driven by predictors such as chaperone-related genes HSP90AA1 and HSP90AB1, highlighting proteostasis-related transcriptional markers. Inhibitory neurons exhibited a distinct pattern characterized by RBFOX1, RORA, GRIN1, RASGEF1B, and LINGO1. Notably, RASGEF1B and LINGO1 have been implicated in Alzheimer's disease, suggesting a potentially shared axis of vulnerability in inhibitory neuron populations across neurodegenerative disorders.</p>
+  <p>DE analysis identified 1,101 DEGs in excitatory neurons, of which 918 were unique to this population. Across all six cell types, excitatory neurons contributed the largest share (0.507) and astrocytes the second-largest (0.225) of DEGs. On average, 35% of machine-learning–nominated predictors were also differentially expressed within the same cell type, indicating substantial concordance. Pathway enrichment showed excitatory-neuron DEGs were enriched for ER protein processing and ubiquitin-mediated proteolysis, while microglial DEGs were enriched for Apelin and JAK-STAT signaling, consistent with immune response pathways.</p>
+
+  <h2>Conclusions</h2>
+  <p>Together, these results suggest that PD-associated transcriptional perturbations are cell-type dependent, with alterations being especially detectable in excitatory neurons. These convergent findings nominate excitatory neurons as a promising entry point for future work aimed at clarifying PD-associated transcriptional changes in the PFC.</p>
 </body>
 </html>

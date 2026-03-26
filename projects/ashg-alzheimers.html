@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>body { font-family: Georgia, serif; max-width: 800px; margin: auto; padding: 40px 24px; line-height: 1.7; color: #222; } h1 { font-size: 22px; } hr { margin: 24px 0; }</style>
+  <style>
+    body { font-family: Georgia, serif; max-width: 800px; margin: auto; padding: 40px 24px; line-height: 1.7; color: #222; }
+    h1 { font-size: 22px; line-height: 1.4; }
+    h2 { font-size: 16px; margin-top: 28px; }
+    hr { margin: 24px 0; border: none; border-top: 1px solid #ddd; }
+    p { margin: 12px 0; }
+  </style>
 </head>
 <body>
   <p><a href="../index.html">← Back to main page</a></p>
@@ -11,7 +17,18 @@
   <p><strong>Adithya V. Madduri</strong>, Randall J. Ellis, Chirag J. Patel</p>
   <p><em>The American Society of Human Genetics Annual Meeting, 2025</em></p>
   <hr>
+
   <h2>Abstract</h2>
-  <p>[Paste your abstract here.]</p>
+  <p>Alzheimer's disease (AD) is a neurodegenerative disorder shaped by complex genetic risk and transcriptional remodeling across diverse brain cell types. We present an integrated machine learning framework to predict AD status at single-cell resolution using both transcriptomic and genetic data from the Religious Orders Study and Memory and Aging Project (ROSMAP).</p>
+
+  <p>We analyzed single-nucleus RNA-sequencing data from Brodmann Area 10, spanning six major cell types — excitatory neurons (Ex), inhibitory neurons (In), oligodendrocytes (Oli), microglia (Mic), oligodendrocyte progenitor cells (OPCs), and astrocytes (Ast). Light Gradient Boosting Machine (LGBM) classifiers were trained on normalized gene expression to classify cells and identify predictive genes.</p>
+
+  <p>At the cell type level, classifiers trained on gene expression achieved ROC AUC values above 0.6 in astrocytes, microglia, excitatory neurons, and oligodendrocytes. In astrocytes and microglia, combining gene expression with demographics (sex, APOE, etc.) outperformed using demographics alone. Subcluster-level modeling revealed that gene expression in Excitatory Neuron subcluster 6 yielded particularly strong predictive performance, with ROC AUC nearing 0.8.</p>
+
+  <p>Feature importance analysis at the cell type level nominated several genes as predictive of AD status, including ARL17B, LINGO1, RASGEF1B, GFAP, and PLXDC2. While ARL17B, LINGO1, and RASGEF1B were predictive across multiple cell types, PLXDC2 was specific to microglia. Preliminary SNP-based models — trained on imputed genotypes filtered to include AD-associated GWAS variants — also identified ARL17B and LINGO1 loci as disease-associated, motivating follow-up analyses to identify SNPs that complement or improve upon APOE-based risk stratification.</p>
+
+  <p>To investigate whether transcriptional dynamics reflected underlying disease progression, we performed pseudotime trajectory inference within each cell type and subcluster. Pseudotime values were correlated with Braak stage in select excitatory and inhibitory neuron subclusters, most notably in Excitatory subclusters 3 and 9, suggesting that the trajectories captured disease-relevant transcriptional changes.</p>
+
+  <p>Overall, this work demonstrates that integrative machine learning models can decode AD status from multi-modal single-cell data and prioritize transcriptomic and genetic features linked to disease.</p>
 </body>
 </html>
